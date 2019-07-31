@@ -17,32 +17,35 @@ function getMessageInstance(callback: (i: any) => void) {
     callback(messageInstance);
     return;
   }
-  Notification.newInstance({
-    prefixCls,
-    transitionName,
-    style: { top: defaultTop }, // 覆盖原来的样式
-    getContainer,
-    maxCount,
-  }, (instance: any) => {
-    if (messageInstance) {
-      callback(messageInstance);
-      return;
-    }
-    messageInstance = instance;
-    callback(instance);
-  });
+  Notification.newInstance(
+    {
+      prefixCls,
+      transitionName,
+      style: { top: defaultTop }, // 覆盖原来的样式
+      getContainer,
+      maxCount,
+    },
+    (instance: any) => {
+      if (messageInstance) {
+        callback(messageInstance);
+        return;
+      }
+      messageInstance = instance;
+      callback(instance);
+    },
+  );
 }
 
 type NoticeType = 'info' | 'success' | 'error' | 'warning' | 'loading';
 
 export interface ThenableArgument {
-  (_: any): any;
+  (val: any): void;
 }
 
 export interface MessageType {
   (): void;
-  then: (fill: ThenableArgument, reject: ThenableArgument) => Promise<any>;
-  promise: Promise<any>;
+  then: (fill: ThenableArgument, reject: ThenableArgument) => Promise<void>;
+  promise: Promise<void>;
 }
 
 export interface ArgsProps {
@@ -55,30 +58,36 @@ export interface ArgsProps {
 
 function notice(args: ArgsProps): MessageType {
   const duration = args.duration !== undefined ? args.duration : defaultDuration;
-  const iconType = ({
+  const iconType = {
     info: 'info-circle',
     success: 'check-circle',
     error: 'close-circle',
     warning: 'exclamation-circle',
     loading: 'loading',
-  })[args.type];
+  }[args.type];
 
   const target = key++;
-  const closePromise = new Promise((resolve) => {
+  const closePromise = new Promise(resolve => {
     const callback = () => {
       if (typeof args.onClose === 'function') {
         args.onClose();
       }
       return resolve(true);
     };
-    getMessageInstance((instance) => {
-      const iconNode = <Icon type={iconType} theme={iconType === 'loading' ? 'outlined' : 'filled'} />;
+    getMessageInstance(instance => {
+      const iconNode = (
+        <Icon type={iconType} theme={iconType === 'loading' ? 'outlined' : 'filled'} />
+      );
       instance.notice({
         key: target,
         duration,
         style: {},
         content: (
-          <div className={`${prefixCls}-custom-content${args.type ? ` ${prefixCls}-${args.type}` : ''}`}>
+          <div
+            className={`${prefixCls}-custom-content${
+              args.type ? ` ${prefixCls}-${args.type}` : ''
+            }`}
+          >
             {args.icon ? args.icon : iconType ? iconNode : ''}
             <span>{args.content}</span>
           </div>
@@ -92,7 +101,8 @@ function notice(args: ArgsProps): MessageType {
       messageInstance.removeNotice(target);
     }
   };
-  result.then = (filled: ThenableArgument, rejected: ThenableArgument) => closePromise.then(filled, rejected);
+  result.then = (filled: ThenableArgument, rejected: ThenableArgument) =>
+    closePromise.then(filled, rejected);
   result.promise = closePromise;
   return result;
 }
@@ -143,7 +153,7 @@ const api: any = {
   },
 };
 
-['success', 'info', 'warning', 'error', 'loading'].forEach((type) => {
+['success', 'info', 'warning', 'error', 'loading'].forEach(type => {
   api[type] = (content: ConfigContent, duration?: ConfigDuration, onClose?: ConfigOnClose) => {
     if (typeof duration === 'function') {
       onClose = duration;

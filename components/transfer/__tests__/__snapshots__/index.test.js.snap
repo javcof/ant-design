@@ -11,7 +11,7 @@ exports[`Transfer should render correctly 1`] = `
       class="ant-transfer-list-header"
     >
       <label
-        class="ant-checkbox-wrapper"
+        class="ant-checkbox-wrapper ant-checkbox-wrapper-checked"
       >
         <span
           class="ant-checkbox ant-checkbox-checked"
@@ -47,7 +47,7 @@ exports[`Transfer should render correctly 1`] = `
           class="ant-transfer-list-content-item"
         >
           <label
-            class="ant-checkbox-wrapper"
+            class="ant-checkbox-wrapper ant-checkbox-wrapper-checked"
           >
             <span
               class="ant-checkbox ant-checkbox-checked"
@@ -62,13 +62,15 @@ exports[`Transfer should render correctly 1`] = `
               />
             </span>
           </label>
-          <span />
+          <span
+            class="ant-transfer-list-content-item-text"
+          />
         </li>
         <li
           class="ant-transfer-list-content-item ant-transfer-list-content-item-disabled"
         >
           <label
-            class="ant-checkbox-wrapper"
+            class="ant-checkbox-wrapper ant-checkbox-wrapper-disabled"
           >
             <span
               class="ant-checkbox ant-checkbox-disabled"
@@ -83,14 +85,11 @@ exports[`Transfer should render correctly 1`] = `
               />
             </span>
           </label>
-          <span />
+          <span
+            class="ant-transfer-list-content-item-text"
+          />
         </li>
       </ul>
-      <div
-        class="ant-transfer-list-body-not-found"
-      >
-        Not Found
-      </div>
     </div>
   </div>
   <div
@@ -101,6 +100,7 @@ exports[`Transfer should render correctly 1`] = `
       type="button"
     >
       <i
+        aria-label="icon: right"
         class="anticon anticon-right"
       >
         <svg
@@ -108,6 +108,7 @@ exports[`Transfer should render correctly 1`] = `
           class=""
           data-icon="right"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -124,6 +125,7 @@ exports[`Transfer should render correctly 1`] = `
       type="button"
     >
       <i
+        aria-label="icon: left"
         class="anticon anticon-left"
       >
         <svg
@@ -131,6 +133,7 @@ exports[`Transfer should render correctly 1`] = `
           class=""
           data-icon="left"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -198,14 +201,11 @@ exports[`Transfer should render correctly 1`] = `
               />
             </span>
           </label>
-          <span />
+          <span
+            class="ant-transfer-list-content-item-text"
+          />
         </li>
       </ul>
-      <div
-        class="ant-transfer-list-body-not-found"
-      >
-        Not Found
-      </div>
     </div>
   </div>
 </div>
@@ -272,16 +272,13 @@ exports[`Transfer should show sorted targetkey 1`] = `
               />
             </span>
           </label>
-          <span>
+          <span
+            class="ant-transfer-list-content-item-text"
+          >
             a
           </span>
         </li>
       </ul>
-      <div
-        class="ant-transfer-list-body-not-found"
-      >
-        Not Found
-      </div>
     </div>
   </div>
   <div
@@ -293,6 +290,7 @@ exports[`Transfer should show sorted targetkey 1`] = `
       type="button"
     >
       <i
+        aria-label="icon: right"
         class="anticon anticon-right"
       >
         <svg
@@ -300,6 +298,7 @@ exports[`Transfer should show sorted targetkey 1`] = `
           class=""
           data-icon="right"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -316,6 +315,7 @@ exports[`Transfer should show sorted targetkey 1`] = `
       type="button"
     >
       <i
+        aria-label="icon: left"
         class="anticon anticon-left"
       >
         <svg
@@ -323,6 +323,7 @@ exports[`Transfer should show sorted targetkey 1`] = `
           class=""
           data-icon="left"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -391,7 +392,9 @@ exports[`Transfer should show sorted targetkey 1`] = `
               />
             </span>
           </label>
-          <span>
+          <span
+            class="ant-transfer-list-content-item-text"
+          >
             c
           </span>
         </li>
@@ -414,16 +417,13 @@ exports[`Transfer should show sorted targetkey 1`] = `
               />
             </span>
           </label>
-          <span>
+          <span
+            class="ant-transfer-list-content-item-text"
+          >
             b
           </span>
         </li>
       </ul>
-      <div
-        class="ant-transfer-list-body-not-found"
-      >
-        Not Found
-      </div>
     </div>
   </div>
 </div>

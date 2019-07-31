@@ -1,53 +1,35 @@
 const path = require('path');
 const CSSSplitWebpackPlugin = require('css-split-webpack-plugin').default;
 const replaceLib = require('antd-tools/lib/replaceLib');
-const webpack = require('webpack');
-const WebpackBar = require('webpackbar');
 
 const isDev = process.env.NODE_ENV === 'development';
 const usePreact = process.env.REACT_ENV === 'preact';
 
 function alertBabelConfig(rules) {
-  rules.forEach((rule) => {
+  rules.forEach(rule => {
     if (rule.loader && rule.loader === 'babel-loader') {
       if (rule.options.plugins.indexOf(replaceLib) === -1) {
         rule.options.plugins.push(replaceLib);
       }
-      rule.options.plugins = rule.options.plugins.filter(plugin => (
-        !plugin.indexOf || plugin.indexOf('babel-plugin-add-module-exports') === -1
-      ));
+      // eslint-disable-next-line
+      rule.options.plugins = rule.options.plugins.filter(
+        plugin => !plugin.indexOf || plugin.indexOf('babel-plugin-add-module-exports') === -1,
+      );
+      // Add babel-plugin-add-react-displayname
+      rule.options.plugins.push(require.resolve('babel-plugin-add-react-displayname'));
     } else if (rule.use) {
       alertBabelConfig(rule.use);
     }
   });
 }
 
-function usePrettyWebpackBar(config) {
-  // remove old progress plugin.
-  config.plugins = config.plugins
-    .filter((plugin) => {
-      return !(plugin instanceof webpack.ProgressPlugin)
-        && !(plugin instanceof WebpackBar);
-    });
-
-  // use brand new progress bar.
-  config.plugins.push(
-    new WebpackBar({
-      name: '📦  Site',
-      minimal: false,
-    })
-  );
-}
-
 module.exports = {
   port: 8001,
+  hash: true,
   source: {
     components: './components',
     docs: './docs',
-    changelog: [
-      'CHANGELOG.zh-CN.md',
-      'CHANGELOG.en-US.md',
-    ],
+    changelog: ['CHANGELOG.zh-CN.md', 'CHANGELOG.en-US.md'],
   },
   theme: './site/theme',
   htmlTemplate: './site/theme/static/template.html',
@@ -63,6 +45,7 @@ module.exports = {
       其他: 6,
       Other: 6,
       Components: 100,
+      组件: 100,
     },
     typeOrder: {
       General: 0,
@@ -71,8 +54,16 @@ module.exports = {
       'Data Entry': 3,
       'Data Display': 4,
       Feedback: 5,
-      Localization: 6,
-      Other: 7,
+      Other: 6,
+      Deprecated: 7,
+      通用: 0,
+      布局: 1,
+      导航: 2,
+      数据录入: 3,
+      数据展示: 4,
+      反馈: 5,
+      其他: 6,
+      废弃: 7,
     },
     docVersions: {
       '0.9.x': 'http://09x.ant.design',
@@ -97,9 +88,12 @@ module.exports = {
   },
   doraConfig: {
     verbose: true,
-    plugins: ['dora-plugin-upload'],
+  },
+  lessConfig: {
+    javascriptEnabled: true,
   },
   webpackConfig(config) {
+    // eslint-disable-next-line
     config.resolve.alias = {
       'antd/lib': path.join(process.cwd(), 'components'),
       'antd/es': path.join(process.cwd(), 'components'),
@@ -108,11 +102,13 @@ module.exports = {
       'react-router': 'react-router/umd/ReactRouter',
     };
 
+    // eslint-disable-next-line
     config.externals = {
       'react-router-dom': 'ReactRouterDOM',
     };
 
     if (usePreact) {
+      // eslint-disable-next-line
       config.resolve.alias = Object.assign({}, config.resolve.alias, {
         react: 'preact-compat',
         'react-dom': 'preact-compat',
@@ -122,17 +118,20 @@ module.exports = {
     }
 
     if (isDev) {
+      // eslint-disable-next-line
       config.devtool = 'source-map';
     }
 
     alertBabelConfig(config.module.rules);
-    usePrettyWebpackBar(config);
 
-    config.plugins.push(
-      new CSSSplitWebpackPlugin({ size: 4000 }),
-    );
+    config.plugins.push(new CSSSplitWebpackPlugin({ size: 4000 }));
 
     return config;
+  },
+
+  devServerConfig: {
+    public: process.env.DEV_HOST || 'localhost',
+    disableHostCheck: !!process.env.DEV_HOST,
   },
 
   htmlTemplateExtraData: {

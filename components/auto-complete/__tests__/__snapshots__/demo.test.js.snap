@@ -7,6 +7,7 @@ exports[`renders ./components/auto-complete/demo/basic.md correctly 1`] = `
 >
   <div
     aria-autocomplete="list"
+    aria-controls=""
     aria-expanded="false"
     aria-haspopup="true"
     class="ant-select-selection
@@ -50,6 +51,7 @@ exports[`renders ./components/auto-complete/demo/basic.md correctly 1`] = `
       unselectable="on"
     >
       <i
+        aria-label="icon: down"
         class="anticon anticon-down ant-select-arrow-icon"
       >
         <svg
@@ -57,6 +59,7 @@ exports[`renders ./components/auto-complete/demo/basic.md correctly 1`] = `
           class=""
           data-icon="down"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -82,6 +85,7 @@ exports[`renders ./components/auto-complete/demo/certain-category.md correctly 1
   >
     <div
       aria-autocomplete="list"
+      aria-controls=""
       aria-expanded="false"
       aria-haspopup="true"
       class="ant-select-selection
@@ -117,6 +121,7 @@ exports[`renders ./components/auto-complete/demo/certain-category.md correctly 1
                   class="ant-input-suffix"
                 >
                   <i
+                    aria-label="icon: search"
                     class="anticon anticon-search certain-category-icon"
                   >
                     <svg
@@ -124,6 +129,7 @@ exports[`renders ./components/auto-complete/demo/certain-category.md correctly 1
                       class=""
                       data-icon="search"
                       fill="currentColor"
+                      focusable="false"
                       height="1em"
                       viewBox="64 64 896 896"
                       width="1em"
@@ -150,6 +156,7 @@ exports[`renders ./components/auto-complete/demo/certain-category.md correctly 1
         unselectable="on"
       >
         <i
+          aria-label="icon: down"
           class="anticon anticon-down ant-select-arrow-icon"
         >
           <svg
@@ -157,6 +164,7 @@ exports[`renders ./components/auto-complete/demo/certain-category.md correctly 1
             class=""
             data-icon="down"
             fill="currentColor"
+            focusable="false"
             height="1em"
             viewBox="64 64 896 896"
             width="1em"
@@ -179,6 +187,7 @@ exports[`renders ./components/auto-complete/demo/custom.md correctly 1`] = `
 >
   <div
     aria-autocomplete="list"
+    aria-controls=""
     aria-expanded="false"
     aria-haspopup="true"
     class="ant-select-selection
@@ -215,6 +224,7 @@ exports[`renders ./components/auto-complete/demo/custom.md correctly 1`] = `
       unselectable="on"
     >
       <i
+        aria-label="icon: down"
         class="anticon anticon-down ant-select-arrow-icon"
       >
         <svg
@@ -222,6 +232,7 @@ exports[`renders ./components/auto-complete/demo/custom.md correctly 1`] = `
           class=""
           data-icon="down"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -243,6 +254,7 @@ exports[`renders ./components/auto-complete/demo/non-case-sensitive.md correctly
 >
   <div
     aria-autocomplete="list"
+    aria-controls=""
     aria-expanded="false"
     aria-haspopup="true"
     class="ant-select-selection
@@ -286,6 +298,7 @@ exports[`renders ./components/auto-complete/demo/non-case-sensitive.md correctly
       unselectable="on"
     >
       <i
+        aria-label="icon: down"
         class="anticon anticon-down ant-select-arrow-icon"
       >
         <svg
@@ -293,6 +306,7 @@ exports[`renders ./components/auto-complete/demo/non-case-sensitive.md correctly
           class=""
           data-icon="down"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -314,6 +328,7 @@ exports[`renders ./components/auto-complete/demo/options.md correctly 1`] = `
 >
   <div
     aria-autocomplete="list"
+    aria-controls=""
     aria-expanded="false"
     aria-haspopup="true"
     class="ant-select-selection
@@ -357,6 +372,7 @@ exports[`renders ./components/auto-complete/demo/options.md correctly 1`] = `
       unselectable="on"
     >
       <i
+        aria-label="icon: down"
         class="anticon anticon-down ant-select-arrow-icon"
       >
         <svg
@@ -364,6 +380,7 @@ exports[`renders ./components/auto-complete/demo/options.md correctly 1`] = `
           class=""
           data-icon="down"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -389,6 +406,7 @@ exports[`renders ./components/auto-complete/demo/uncertain-category.md correctly
   >
     <div
       aria-autocomplete="list"
+      aria-controls=""
       aria-expanded="false"
       aria-haspopup="true"
       class="ant-select-selection
@@ -425,9 +443,11 @@ exports[`renders ./components/auto-complete/demo/uncertain-category.md correctly
                 >
                   <button
                     class="ant-btn search-btn ant-btn-primary ant-btn-lg"
+                    style="margin-right:-12px"
                     type="button"
                   >
                     <i
+                      aria-label="icon: search"
                       class="anticon anticon-search"
                     >
                       <svg
@@ -435,6 +455,7 @@ exports[`renders ./components/auto-complete/demo/uncertain-category.md correctly
                         class=""
                         data-icon="search"
                         fill="currentColor"
+                        focusable="false"
                         height="1em"
                         viewBox="64 64 896 896"
                         width="1em"
@@ -462,6 +483,7 @@ exports[`renders ./components/auto-complete/demo/uncertain-category.md correctly
         unselectable="on"
       >
         <i
+          aria-label="icon: down"
           class="anticon anticon-down ant-select-arrow-icon"
         >
           <svg
@@ -469,6 +491,7 @@ exports[`renders ./components/auto-complete/demo/uncertain-category.md correctly
             class=""
             data-icon="down"
             fill="currentColor"
+            focusable="false"
             height="1em"
             viewBox="64 64 896 896"
             width="1em"

@@ -35,6 +35,7 @@ exports[`Upload List handle error 1`] = `
       >
         <span>
           <i
+            aria-label="icon: paper-clip"
             class="anticon anticon-paper-clip"
           >
             <svg
@@ -42,6 +43,7 @@ exports[`Upload List handle error 1`] = `
               class=""
               data-icon="paper-clip"
               fill="currentColor"
+              focusable="false"
               height="1em"
               viewBox="64 64 896 896"
               width="1em"
@@ -60,7 +62,9 @@ exports[`Upload List handle error 1`] = `
         </span>
       </div>
       <i
+        aria-label="icon: close"
         class="anticon anticon-close"
+        tabindex="-1"
         title="Remove file"
       >
         <svg
@@ -68,6 +72,7 @@ exports[`Upload List handle error 1`] = `
           class=""
           data-icon="close"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -92,7 +97,7 @@ exports[`Upload List handle error 1`] = `
               >
                 <div
                   class="ant-progress-bg"
-                  style="width: 0%; height: 2px; border-radius: 100px;"
+                  style="width: 0%; height: 2px;"
                 />
               </div>
             </div>
@@ -139,6 +144,7 @@ exports[`Upload List should be uploading when upload a file 1`] = `
       >
         <span>
           <i
+            aria-label="icon: loading"
             class="anticon anticon-loading"
           >
             <svg
@@ -146,6 +152,7 @@ exports[`Upload List should be uploading when upload a file 1`] = `
               class="anticon-spin"
               data-icon="loading"
               fill="currentColor"
+              focusable="false"
               height="1em"
               viewBox="0 0 1024 1024"
               width="1em"
@@ -164,7 +171,9 @@ exports[`Upload List should be uploading when upload a file 1`] = `
         </span>
       </div>
       <i
+        aria-label="icon: close"
         class="anticon anticon-close"
+        tabindex="-1"
         title="Remove file"
       >
         <svg
@@ -172,6 +181,7 @@ exports[`Upload List should be uploading when upload a file 1`] = `
           class=""
           data-icon="close"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -196,7 +206,7 @@ exports[`Upload List should be uploading when upload a file 1`] = `
               >
                 <div
                   class="ant-progress-bg"
-                  style="width: 0%; height: 2px; border-radius: 100px;"
+                  style="width: 0%; height: 2px;"
                 />
               </div>
             </div>
@@ -243,6 +253,7 @@ exports[`Upload List should be uploading when upload a file 2`] = `
       >
         <span>
           <i
+            aria-label="icon: paper-clip"
             class="anticon anticon-paper-clip"
           >
             <svg
@@ -250,6 +261,7 @@ exports[`Upload List should be uploading when upload a file 2`] = `
               class=""
               data-icon="paper-clip"
               fill="currentColor"
+              focusable="false"
               height="1em"
               viewBox="64 64 896 896"
               width="1em"
@@ -268,7 +280,9 @@ exports[`Upload List should be uploading when upload a file 2`] = `
         </span>
       </div>
       <i
+        aria-label="icon: close"
         class="anticon anticon-close"
+        tabindex="-1"
         title="Remove file"
       >
         <svg
@@ -276,6 +290,7 @@ exports[`Upload List should be uploading when upload a file 2`] = `
           class=""
           data-icon="close"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -300,7 +315,7 @@ exports[`Upload List should be uploading when upload a file 2`] = `
               >
                 <div
                   class="ant-progress-bg"
-                  style="width: 0%; height: 2px; border-radius: 100px;"
+                  style="width: 0%; height: 2px;"
                 />
               </div>
             </div>
@@ -353,6 +368,7 @@ exports[`Upload List should non-image format file preview 1`] = `
             target="_blank"
           >
             <i
+              aria-label="icon: file"
               class="anticon anticon-file ant-upload-list-item-icon"
             >
               <svg
@@ -360,12 +376,18 @@ exports[`Upload List should non-image format file preview 1`] = `
                 class=""
                 data-icon="file"
                 fill="currentColor"
+                focusable="false"
                 height="1em"
                 viewBox="64 64 896 896"
                 width="1em"
               >
                 <path
-                  d="M854.6 288.6L639.4 73.4c-6-6-14.1-9.4-22.6-9.4H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V311.3c0-8.5-3.4-16.7-9.4-22.7zM790.2 326H602V137.8L790.2 326zm1.8 562H232V136h302v216a42 42 0 0 0 42 42h216v494z"
+                  d="M534 352V136H232v752h560V394H576a42 42 0 0 1-42-42z"
+                  fill="#e6f7ff"
+                />
+                <path
+                  d="M854.6 288.6L639.4 73.4c-6-6-14.1-9.4-22.6-9.4H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V311.3c0-8.5-3.4-16.7-9.4-22.7zM602 137.8L790.2 326H602V137.8zM792 888H232V136h302v216a42 42 0 0 0 42 42h216v494z"
+                  fill="#1890ff"
                 />
               </svg>
             </i>
@@ -382,7 +404,9 @@ exports[`Upload List should non-image format file preview 1`] = `
         </span>
       </div>
       <i
+        aria-label="icon: close"
         class="anticon anticon-close"
+        tabindex="-1"
         title="Remove file"
       >
         <svg
@@ -390,6 +414,7 @@ exports[`Upload List should non-image format file preview 1`] = `
           class=""
           data-icon="close"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -415,6 +440,7 @@ exports[`Upload List should non-image format file preview 1`] = `
           >
             <img
               alt="image"
+              class="ant-upload-list-item-image"
               src="https://cdn.xxx.com/aaa"
             />
           </a>
@@ -430,7 +456,9 @@ exports[`Upload List should non-image format file preview 1`] = `
         </span>
       </div>
       <i
+        aria-label="icon: close"
         class="anticon anticon-close"
+        tabindex="-1"
         title="Remove file"
       >
         <svg
@@ -438,6 +466,7 @@ exports[`Upload List should non-image format file preview 1`] = `
           class=""
           data-icon="close"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -462,6 +491,7 @@ exports[`Upload List should non-image format file preview 1`] = `
             target="_blank"
           >
             <i
+              aria-label="icon: file"
               class="anticon anticon-file ant-upload-list-item-icon"
             >
               <svg
@@ -469,12 +499,18 @@ exports[`Upload List should non-image format file preview 1`] = `
                 class=""
                 data-icon="file"
                 fill="currentColor"
+                focusable="false"
                 height="1em"
                 viewBox="64 64 896 896"
                 width="1em"
               >
                 <path
-                  d="M854.6 288.6L639.4 73.4c-6-6-14.1-9.4-22.6-9.4H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V311.3c0-8.5-3.4-16.7-9.4-22.7zM790.2 326H602V137.8L790.2 326zm1.8 562H232V136h302v216a42 42 0 0 0 42 42h216v494z"
+                  d="M534 352V136H232v752h560V394H576a42 42 0 0 1-42-42z"
+                  fill="#e6f7ff"
+                />
+                <path
+                  d="M854.6 288.6L639.4 73.4c-6-6-14.1-9.4-22.6-9.4H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V311.3c0-8.5-3.4-16.7-9.4-22.7zM602 137.8L790.2 326H602V137.8zM792 888H232V136h302v216a42 42 0 0 0 42 42h216v494z"
+                  fill="#1890ff"
                 />
               </svg>
             </i>
@@ -491,7 +527,9 @@ exports[`Upload List should non-image format file preview 1`] = `
         </span>
       </div>
       <i
+        aria-label="icon: close"
         class="anticon anticon-close"
+        tabindex="-1"
         title="Remove file"
       >
         <svg
@@ -499,6 +537,7 @@ exports[`Upload List should non-image format file preview 1`] = `
           class=""
           data-icon="close"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -523,6 +562,7 @@ exports[`Upload List should non-image format file preview 1`] = `
             target="_blank"
           >
             <i
+              aria-label="icon: file"
               class="anticon anticon-file ant-upload-list-item-icon"
             >
               <svg
@@ -530,12 +570,18 @@ exports[`Upload List should non-image format file preview 1`] = `
                 class=""
                 data-icon="file"
                 fill="currentColor"
+                focusable="false"
                 height="1em"
                 viewBox="64 64 896 896"
                 width="1em"
               >
                 <path
-                  d="M854.6 288.6L639.4 73.4c-6-6-14.1-9.4-22.6-9.4H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V311.3c0-8.5-3.4-16.7-9.4-22.7zM790.2 326H602V137.8L790.2 326zm1.8 562H232V136h302v216a42 42 0 0 0 42 42h216v494z"
+                  d="M534 352V136H232v752h560V394H576a42 42 0 0 1-42-42z"
+                  fill="#e6f7ff"
+                />
+                <path
+                  d="M854.6 288.6L639.4 73.4c-6-6-14.1-9.4-22.6-9.4H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V311.3c0-8.5-3.4-16.7-9.4-22.7zM602 137.8L790.2 326H602V137.8zM792 888H232V136h302v216a42 42 0 0 0 42 42h216v494z"
+                  fill="#1890ff"
                 />
               </svg>
             </i>
@@ -552,7 +598,9 @@ exports[`Upload List should non-image format file preview 1`] = `
         </span>
       </div>
       <i
+        aria-label="icon: close"
         class="anticon anticon-close"
+        tabindex="-1"
         title="Remove file"
       >
         <svg
@@ -560,6 +608,7 @@ exports[`Upload List should non-image format file preview 1`] = `
           class=""
           data-icon="close"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -585,6 +634,7 @@ exports[`Upload List should non-image format file preview 1`] = `
           >
             <img
               alt="image"
+              class="ant-upload-list-item-image"
               src="https://cdn.xxx.com/xx.xx/aaa.png"
             />
           </a>
@@ -600,7 +650,9 @@ exports[`Upload List should non-image format file preview 1`] = `
         </span>
       </div>
       <i
+        aria-label="icon: close"
         class="anticon anticon-close"
+        tabindex="-1"
         title="Remove file"
       >
         <svg
@@ -608,6 +660,7 @@ exports[`Upload List should non-image format file preview 1`] = `
           class=""
           data-icon="close"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -633,6 +686,7 @@ exports[`Upload List should non-image format file preview 1`] = `
           >
             <img
               alt="image"
+              class="ant-upload-list-item-image"
               src="data:image/png;base64,UEsDBAoAAAAAADYZYkwAAAAAAAAAAAAAAAAdAAk"
             />
           </a>
@@ -648,7 +702,9 @@ exports[`Upload List should non-image format file preview 1`] = `
         </span>
       </div>
       <i
+        aria-label="icon: close"
         class="anticon anticon-close"
+        tabindex="-1"
         title="Remove file"
       >
         <svg
@@ -656,6 +712,7 @@ exports[`Upload List should non-image format file preview 1`] = `
           class=""
           data-icon="close"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -681,6 +738,7 @@ exports[`Upload List should non-image format file preview 1`] = `
           >
             <img
               alt="image"
+              class="ant-upload-list-item-image"
               src="https://cdn.xxx.com/xx.xx/aaa.png?query=123"
             />
           </a>
@@ -696,7 +754,9 @@ exports[`Upload List should non-image format file preview 1`] = `
         </span>
       </div>
       <i
+        aria-label="icon: close"
         class="anticon anticon-close"
+        tabindex="-1"
         title="Remove file"
       >
         <svg
@@ -704,6 +764,7 @@ exports[`Upload List should non-image format file preview 1`] = `
           class=""
           data-icon="close"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -729,6 +790,7 @@ exports[`Upload List should non-image format file preview 1`] = `
           >
             <img
               alt="image"
+              class="ant-upload-list-item-image"
               src="https://cdn.xxx.com/xx.xx/aaa.png#anchor"
             />
           </a>
@@ -744,7 +806,9 @@ exports[`Upload List should non-image format file preview 1`] = `
         </span>
       </div>
       <i
+        aria-label="icon: close"
         class="anticon anticon-close"
+        tabindex="-1"
         title="Remove file"
       >
         <svg
@@ -752,6 +816,7 @@ exports[`Upload List should non-image format file preview 1`] = `
           class=""
           data-icon="close"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -777,6 +842,7 @@ exports[`Upload List should non-image format file preview 1`] = `
           >
             <img
               alt="image"
+              class="ant-upload-list-item-image"
               src="https://cdn.xxx.com/xx.xx/aaa.png?query=some.query.with.dot"
             />
           </a>
@@ -792,7 +858,9 @@ exports[`Upload List should non-image format file preview 1`] = `
         </span>
       </div>
       <i
+        aria-label="icon: close"
         class="anticon anticon-close"
+        tabindex="-1"
         title="Remove file"
       >
         <svg
@@ -800,6 +868,7 @@ exports[`Upload List should non-image format file preview 1`] = `
           class=""
           data-icon="close"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
@@ -825,6 +894,7 @@ exports[`Upload List should non-image format file preview 1`] = `
           >
             <img
               alt="image"
+              class="ant-upload-list-item-image"
               src="https://publish-pic-cpu.baidu.com/1296beb3-50d9-4276-885f-52645cbb378e.jpeg@w_228%2ch_152"
             />
           </a>
@@ -840,7 +910,9 @@ exports[`Upload List should non-image format file preview 1`] = `
         </span>
       </div>
       <i
+        aria-label="icon: close"
         class="anticon anticon-close"
+        tabindex="-1"
         title="Remove file"
       >
         <svg
@@ -848,6 +920,7 @@ exports[`Upload List should non-image format file preview 1`] = `
           class=""
           data-icon="close"
           fill="currentColor"
+          focusable="false"
           height="1em"
           viewBox="64 64 896 896"
           width="1em"
